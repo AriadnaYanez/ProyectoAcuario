@@ -306,6 +306,10 @@ int main()
 	Model fish1("resources/objects/Fish/fish1.obj");
 	Model fish2("resources/objects/Fish/fish2.obj");
 	Model fish3("resources/objects/Fish/fish3.obj");
+	Model ave1("resources/objects/aves/ave1.obj");
+	Model ave2("resources/objects/aves/ave2.obj");
+	Model ave3("resources/objects/aves/ave3.obj");
+
 
 
 
@@ -675,6 +679,7 @@ int main()
 
 
 	//Modelos Ariadna
+		//peces
 		model = glm::translate(glm::mat4(1.0f), glm::vec3(50.0f, 5.0f, -200.0f));
 		model = glm::scale(model, glm::vec3(4.0f));
 		staticShader.setMat4("model", model);
@@ -689,6 +694,19 @@ int main()
 		model = glm::scale(model, glm::vec3(4.0f));
 		staticShader.setMat4("model", model);
 		fish3.Draw(staticShader);
+
+		//Aves
+		model = glm::translate(glm::mat4(1.0f), glm::vec3(-370.0f, 0.0f, 300.0f));
+		model = glm::rotate(model, glm::radians(60.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		model = glm::scale(model, glm::vec3(16.0f));
+		staticShader.setMat4("model", model);
+		ave1.Draw(staticShader);
+
+		model = glm::translate(glm::mat4(1.0f), glm::vec3(-470.0f, 0.0f, 200.0f));
+		model = glm::rotate(model, glm::radians(60.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		model = glm::scale(model, glm::vec3(16.0f));
+		staticShader.setMat4("model", model);
+		ave1.Draw(staticShader);
 		
 
 
