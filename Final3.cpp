@@ -309,6 +309,7 @@ int main()
 	Model ave1("resources/objects/aves/ave1.obj");
 	Model ave2("resources/objects/aves/ave2.obj");
 	Model ave3("resources/objects/aves/ave3.obj");
+	Model ave4("resources/objects/aves/ave4.obj");
 
 
 
@@ -702,12 +703,49 @@ int main()
 		staticShader.setMat4("model", model);
 		ave1.Draw(staticShader);
 
-		model = glm::translate(glm::mat4(1.0f), glm::vec3(-470.0f, 0.0f, 200.0f));
+		model = glm::translate(glm::mat4(1.0f), glm::vec3(-470.0f, 0.0f, 230.0f));
 		model = glm::rotate(model, glm::radians(60.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 		model = glm::scale(model, glm::vec3(16.0f));
 		staticShader.setMat4("model", model);
 		ave1.Draw(staticShader);
+
+		model = glm::translate(glm::mat4(1.0f), glm::vec3(-400.0f, 30.0f, 250.0f));
+		model = glm::rotate(model, glm::radians(60.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		model = glm::scale(model, glm::vec3(16.0f));
+		staticShader.setMat4("model", model);
+		ave2.Draw(staticShader);
+
+		model = glm::translate(glm::mat4(1.0f), glm::vec3(-350.0f, 90.0f, 300.0f));
+		model = glm::rotate(model, glm::radians(75.0f), glm::vec3(0.0f, 0.0f, 1.0f));
+		model = glm::scale(model, glm::vec3(16.0f));
+		staticShader.setMat4("model", model);
+		ave2.Draw(staticShader);
+
+		model = glm::translate(glm::mat4(1.0f), glm::vec3(-400.0f, 70.0f, 250.0f));
+		model = glm::rotate(model, glm::radians(340.0f), glm::vec3(0.0f, 0.0f, 1.0f));
+		model = glm::scale(model, glm::vec3(16.0f));
+		staticShader.setMat4("model", model);
+		ave2.Draw(staticShader);
 		
+		model = glm::translate(glm::mat4(1.0f), glm::vec3(-400.0f, 50.0f, 200.0f));
+		model = glm::rotate(model, glm::radians(340.0f), glm::vec3(0.0f, 0.0f, 1.0f));
+		model = glm::scale(model, glm::vec3(16.0f));
+		staticShader.setMat4("model", model);
+		ave3.Draw(staticShader);
+
+		model = glm::translate(glm::mat4(1.0f), glm::vec3(-400.0f, 90.0f, 200.0f));
+		model = glm::rotate(model, glm::radians(300.0f), glm::vec3(0.0f, 0.0f, 1.0f));
+		model = glm::scale(model, glm::vec3(16.0f));
+		staticShader.setMat4("model", model);
+		ave3.Draw(staticShader);
+
+		model = glm::translate(glm::mat4(1.0f), glm::vec3(-360.0f, 40.0f, 310.0f));
+		model = glm::rotate(model, glm::radians(280.0f), glm::vec3(0.0f, 0.0f, 1.0f));
+		model = glm::scale(model, glm::vec3(16.0f));
+		staticShader.setMat4("model", model);
+		ave3.Draw(staticShader);
+
+	
 
 
 	//Fin Modelos Ariadna

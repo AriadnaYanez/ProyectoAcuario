@@ -1,12 +1,12 @@
 ﻿  Final3.cpp
-c:\users\arkra\desktop\unam\2023-i\ihc\proyecto\project\proj\p1\include\shader_m.h(44): warning C4101: 'e': variable local sin referencia
-c:\users\arkra\desktop\unam\2023-i\ihc\proyecto\project\proj\p1\include\modelanim.h(104): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-c:\users\arkra\desktop\unam\2023-i\ihc\proyecto\project\proj\p1\include\modelanim.h(520): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
-c:\users\arkra\desktop\unam\2023-i\ihc\proyecto\project\proj\p1\final3.cpp(906): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-c:\users\arkra\desktop\unam\2023-i\ihc\proyecto\project\proj\p1\final3.cpp(907): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-c:\users\arkra\desktop\unam\2023-i\ihc\proyecto\project\proj\p1\final3.cpp(911): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
-c:\users\arkra\desktop\unam\2023-i\ihc\proyecto\project\proj\p1\final3.cpp(912): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
-c:\users\arkra\desktop\unam\2023-i\ihc\proyecto\project\proj\p1\final3.cpp(914): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-c:\users\arkra\desktop\unam\2023-i\ihc\proyecto\project\proj\p1\final3.cpp(915): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-c:\users\arkra\desktop\unam\2023-i\ihc\proyecto\project\proj\p1\final3.cpp(923): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
-  P1.vcxproj -> C:\Users\arkra\Desktop\UNAM\2023-I\IHC\PROYECTO\Project\Proj\Debug\P1.exe
+c:\users\ary01\desktop\repositorio\proyectoacuario\include\shader_m.h(44): warning C4101: 'e': variable local sin referencia
+c:\users\ary01\desktop\repositorio\proyectoacuario\include\modelanim.h(104): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\ary01\desktop\repositorio\proyectoacuario\include\modelanim.h(520): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\ary01\desktop\repositorio\proyectoacuario\final3.cpp(962): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\ary01\desktop\repositorio\proyectoacuario\final3.cpp(963): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\ary01\desktop\repositorio\proyectoacuario\final3.cpp(967): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\ary01\desktop\repositorio\proyectoacuario\final3.cpp(968): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\ary01\desktop\repositorio\proyectoacuario\final3.cpp(970): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\ary01\desktop\repositorio\proyectoacuario\final3.cpp(971): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\ary01\desktop\repositorio\proyectoacuario\final3.cpp(979): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+  P1.vcxproj -> C:\Users\ary01\Desktop\repositorio\ProyectoAcuario\Debug\P1.exe
