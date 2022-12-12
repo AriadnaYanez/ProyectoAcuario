@@ -310,6 +310,9 @@ int main()
 	Model ave2("resources/objects/aves/ave2.obj");
 	Model ave3("resources/objects/aves/ave3.obj");
 	Model ave4("resources/objects/aves/ave4.obj");
+	Model comida("resources/objects/comida/comida.obj");
+	
+
 
 
 
@@ -743,7 +746,30 @@ int main()
 		model = glm::rotate(model, glm::radians(280.0f), glm::vec3(0.0f, 0.0f, 1.0f));
 		model = glm::scale(model, glm::vec3(16.0f));
 		staticShader.setMat4("model", model);
-		ave3.Draw(staticShader);
+		ave3.Draw(staticShader); 
+
+		//Àrea de comida
+		//comida hamburguesa
+		model = glm::translate(glm::mat4(1.0f), glm::vec3(290.0f, 30.0f, 465.0f));
+		model = glm::rotate(model, glm::radians(-90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		model = glm::scale(model, glm::vec3(6.0f));
+		staticShader.setMat4("model", model);
+		comida.Draw(staticShader);
+
+		model = glm::translate(glm::mat4(1.0f), glm::vec3(240.0f, 30.0f, 395.0f));
+		model = glm::rotate(model, glm::radians(-90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		model = glm::scale(model, glm::vec3(6.0f));
+		staticShader.setMat4("model", model);
+		comida.Draw(staticShader);
+
+		model = glm::translate(glm::mat4(1.0f), glm::vec3(340.0f, 30.0f, 295.0f));
+		model = glm::rotate(model, glm::radians(-90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		model = glm::scale(model, glm::vec3(6.0f));
+		staticShader.setMat4("model", model);
+		comida.Draw(staticShader);
+
+
+		
 
 	
 
