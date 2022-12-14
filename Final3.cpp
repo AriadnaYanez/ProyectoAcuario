@@ -66,11 +66,17 @@ glm::vec3 lightDirection(0.0f, -1.0f, -1.0f);
 float	movAuto_x = 0.0f,
 movAuto_z = 0.0f,
 orienta = 0.0f;
+
+float	movAve_x = 0.0f,
+		movAve_y = 0.0f,
+		movAve_z = 0.0f,
+		orientaAve = 0.0f;
 bool	animacion = false,
 recorrido1 = true,
 recorrido2 = false,
 recorrido3 = false,
-recorrido4 = false;
+recorrido4 = false,
+animacionAve = false;
 
 
 //Keyframes (Manipulación y dibujo)
@@ -84,6 +90,7 @@ incY = 0.0f,
 incZ = 0.0f,
 rotInc = 0.0f,
 giroMonitoInc = 0.0f;
+float giroAla = 0.0f;
 
 #define MAX_FRAMES 9
 int i_max_steps = 60;
@@ -180,6 +187,12 @@ void animate(void)
 	{
 		movAuto_z += 3.0f;
 	}
+	//Animaciòn ave
+	if (animacionAve){
+
+
+	}
+
 }
 
 void getResolution()
@@ -312,7 +325,9 @@ int main()
 	Model ave4("resources/objects/aves/ave4.obj");
 	Model comida("resources/objects/comida/comida.obj");
 	Model pecera("resources/objects/pecera/pecera.obj");
-	
+	Model ave2Cuerpo("resources/objects/aves/ave2cuerpo.obj");
+	Model ave2alaI("resources/objects/aves/ave2alaI.obj");
+	Model ave2alaD("resources/objects/aves/ave2alaD.obj");
 
 
 
@@ -707,15 +722,35 @@ int main()
 		staticShader.setMat4("model", model);
 		ave1.Draw(staticShader);
 
-		model = glm::translate(glm::mat4(1.0f), glm::vec3(-470.0f, 0.0f, 230.0f));
+		model = glm::translate(glm::mat4(1.0f), glm::vec3(-450.0f, 0.0f, 270.0f));
 		model = glm::rotate(model, glm::radians(60.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 		model = glm::scale(model, glm::vec3(16.0f));
 		staticShader.setMat4("model", model);
 		ave1.Draw(staticShader);
 
-		model = glm::translate(glm::mat4(1.0f), glm::vec3(-400.0f, 30.0f, 250.0f));
-		model = glm::rotate(model, glm::radians(60.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		//Ave cortada
+	/*	model = glm::translate(glm::mat4(1.0f), glm::vec3(-400.0f, 30.0f, 250.0f));
 		model = glm::scale(model, glm::vec3(16.0f));
+		staticShader.setMat4("model", model);
+		ave2Cuerpo.Draw(staticShader);
+
+		model = glm::translate(glm::mat4(1.0f), glm::vec3(-400.0f, 30.0f, 250.0f));
+		model = glm::rotate(model, glm::radians(giroAla), glm::vec3(0.0f, 1.0f, 0.0f));
+		model = glm::scale(model, glm::vec3(16.0f));
+		staticShader.setMat4("model", model);
+		ave2alaI.Draw(staticShader);
+
+		model = glm::translate(glm::mat4(1.0f), glm::vec3(-400.0f, 30.0f, 250.0f));
+		model = glm::rotate(model, glm::radians(giroAla), glm::vec3(0.0f, 1.0f, 0.0f));
+		model = glm::scale(model, glm::vec3(16.0f));
+		staticShader.setMat4("model", model);
+		ave2alaD.Draw(staticShader);*/
+		 //fin ave cortada
+
+		//La que se va a animar
+		model = glm::translate(model, glm::vec3(movAve_x, movAve_y, movAve_z));
+		model = glm::rotate(model, glm::radians(75.0f), glm::vec3(0.0f, 0.0f, 1.0f));
+		//model = glm::scale(model, glm::vec3(3.0f));
 		staticShader.setMat4("model", model);
 		ave2.Draw(staticShader);
 
@@ -770,7 +805,8 @@ int main()
 		comida.Draw(staticShader);
 
 
-		pecera.Draw(staticShader);
+
+	
 
 		
 
@@ -937,6 +973,9 @@ void my_input(GLFWwindow *window, int key, int scancode, int action, int mode)
 		lightPosition.x++;
 	if (glfwGetKey(window, GLFW_KEY_N) == GLFW_PRESS)
 		lightPosition.x--;
+
+	if (key == GLFW_KEY_1 && action == GLFW_PRESS)
+		animacionAve ^= true;
 
 	//Car animation
 	if (key == GLFW_KEY_SPACE && action == GLFW_PRESS)
