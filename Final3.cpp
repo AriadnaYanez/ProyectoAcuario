@@ -311,6 +311,7 @@ int main()
 	Model ave3("resources/objects/aves/ave3.obj");
 	Model ave4("resources/objects/aves/ave4.obj");
 	Model comida("resources/objects/comida/comida.obj");
+	Model pecera("resources/objects/pecera/pecera.obj");
 	
 
 
@@ -768,6 +769,8 @@ int main()
 		staticShader.setMat4("model", model);
 		comida.Draw(staticShader);
 
+
+		pecera.Draw(staticShader);
 
 		
 
